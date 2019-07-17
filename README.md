@@ -1,7 +1,18 @@
 # PhotoShare
+WebApp that behaves similar to Tumblr
+
+Guests may:
+Browse photos
+
+Users may:
+Register for an account
+Upload photos, add taggs to photos
+Create Albums to store photos
+Like/Comment other users photos
+Add/Remove Friends
+Look up photos by their hashtags
 
 ## Setup
-------------------------------------------
 First download required files with: 
 ```bash
 pip install -r requirements.txt
