@@ -1,19 +1,32 @@
-README
-
-Setup
+# Setup
 ------------------------------------------
 MySQL
+```bash
 export PATH=${PATH}:/usr/local/mysql/bin #path is the path to your local MySQL file, lets cmd able to call mysql by using the command below:
+```
+```bash
 mysql -u root -h 127.0.0.1 -p
+```
+```bash
+mysql -u root -h 127.0.0.1 -p
+```
 In the MySQL window, use
+```bash
 source /Users/kangtungho/desktop/pa1_tunghokang/schema.sql;
+```
 to choose the database you want for PhotoShare and 
+```bash
 DROP DATABASE pa1;
+```
 to drop the database, make sure the name of the tables/filename is consistent with the one in app.py
 
 Starting PhotoShare
 Inside the directory where all files are located, run command: 
+```bash
 export FLASK_APP=app.py 
+```
 to compile the code and type in: 
+```bash
 flask run 
+```
 to start the application
