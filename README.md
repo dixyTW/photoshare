@@ -2,6 +2,12 @@
 
 ## Setup
 ------------------------------------------
+First download required files with: 
+```bash
+pip install -r requirements.txt
+```
+
+
 MySQL
 ```bash
 export PATH=${PATH}:/usr/local/mysql/bin #path is the path to your local MySQL file, lets cmd able to call mysql by using the command below:
