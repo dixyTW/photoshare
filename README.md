@@ -1,4 +1,6 @@
-# Setup
+# PhotoShare
+
+## Setup
 ------------------------------------------
 MySQL
 ```bash
@@ -11,11 +13,11 @@ mysql -u root -h 127.0.0.1 -p
 mysql -u root -h 127.0.0.1 -p
 ```
 In the MySQL window, use
-```bash
+```MySQL
 source /Users/kangtungho/desktop/pa1_tunghokang/schema.sql;
 ```
 to choose the database you want for PhotoShare and 
-```bash
+```MySQL
 DROP DATABASE pa1;
 ```
 to drop the database, make sure the name of the tables/filename is consistent with the one in app.py
