@@ -1,0 +1,14 @@
+<!doctype html>
+<h2>Photos tagged with {{tag}}</h2>
+<p><a href='/'>Home</a></p>
+{% if photos %}
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}} like<br>
+        <img src='data:image/png;base64, {{photo[0]}}' />
+      </li>
+    {% endfor %}
+    </ul>
+   
+{% endif %}

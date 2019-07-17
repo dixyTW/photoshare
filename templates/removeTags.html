@@ -1,0 +1,19 @@
+<!doctype html>
+<p><a href='/profile'>Back to Profile</a></p>
+<form method="post" enctype="multipart/form-data" action="/removeTags/<{{pid}}>">
+	<label for="tag">Enter the Tag You Would Like to Remove:</label>
+
+    <input type="text" name="tag" required='true' /><br />
+
+    <input type="submit" value="Remove" />
+	</form>
+{% if tags %}
+<h4>A List of tags in selected photo</h4>
+<ul>
+    {% for tag in tags %}
+
+        <li>{{tag[0]}}<br>
+      </li>
+    {% endfor %}
+    </ul>
+{% endif %}

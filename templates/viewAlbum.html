@@ -1,0 +1,12 @@
+<!doctype html>
+<h4>{{msg}}</h4>
+<p><a href='/hello'>Home</a></p>
+<ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}} like<br>
+        <img src='data:image/png;base64, {{photo[0]}}' />
+<!--         has to check if the user already liked the pohto already, show the number of likes -->
+      </li>
+    {% endfor %}
+</ul>

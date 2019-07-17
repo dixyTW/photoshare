@@ -1,0 +1,18 @@
+<!doctype html>
+<form method="post" enctype="multipart/form-data" action="/deletePhoto">
+                <label for="pid">Enter the Photo ID of the Photo You Would Like to Delete:</label>
+                <input type="text" name="pid" required='true' /><br />
+                <input type="submit" value="Delete" />
+            </form>
+<h4>List of Your Photos</h4>
+            {% if photos %}
+    <ul>
+    {% for photo in photos %}
+
+        <li>Photo ID: {{photo[1]}} <br>
+        <img src='data:image/png;base64, {{photo[0]}}' />
+<!--         has to check if the user already liked the pohto already, show the number of likes -->
+      </li>
+
+    {% endfor %}
+    {% endif %}

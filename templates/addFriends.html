@@ -1,0 +1,14 @@
+<head>
+    <title>Add a New Friend</title>
+</head>
+<!--     Has to check if the friend already exists -->
+	<body>
+        <div class="title">
+            <h1>Add a New Friend by UserID</h1>
+        </div>
+            <form method="post" enctype="multipart/form-data" action="/addFriends">
+                <label for="caption">Enter the Person's Email</label>
+                <input type="text" name="friend_id" required='true' /><br />
+                <input type="submit" value="Add" />
+            </form>
+    </body>

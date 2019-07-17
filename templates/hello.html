@@ -1,0 +1,106 @@
+<!-- author ben lawson (balawson@bu.edu) -->
+<!doctype html>
+{% if message %}
+  <h4>{{message}}</h4>
+{% endif %}
+<title>Photoshare</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% endif %}
+
+{% if message == 'Welcome to Photoshare' or message == 'Logged out' %}
+<p>You should <a href='/login'>Login</a> or <a href='/register'>Become A New Member</a></p>
+{% else %}
+  <p><a href='/profile'>profile</a></p>
+  <ul>
+    <li><a href= '/addFriends'>Add New Friends</a></li>
+<li><a href='/upload'>Upload a photo</a> </li> 
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/'>Home</a></li>
+</ul>
+{% endif %}
+
+<h2>Top Contirbutors</h2>
+{% if tops %}
+  <ol>
+  {% for top in tops %}
+  <li>{{top}}</li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+<p><a href='/searchPhoto'>Search For Pictures by Tag</a></p>
+
+{% if pops %}
+<h2>Most Popular Tags</h2>
+    <ol>
+    {% for pop in pops %}
+
+        <li><a href= '/pop_Tag/<{{pop[0]}}>'>{{pop[0]}}<br>
+      </li>
+    {% endfor %}
+    </ol>
+{% endif %}
+
+{% if tags %}
+<h2>Tags</h2>
+    <ul>
+    {% for tag in tags %}
+
+        <li><a href='/tag_photo/<{{tag[0]}}>'>{{tag[0]}}</a><br>
+      </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if albums %}
+<h2>Albums</h2>
+    <ul>
+    {% for album in albums %}
+
+        <li><a href='/viewAlbum/<{{album[2]}}>'>{{album[0]}}</a> by {{album[1]}}<br>
+      </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if photos %}
+<h2>Photos</h2>
+    <ul>
+    {% for x in range(photos|length) %}
+
+        <li>{{photos[x][2]}}<br>
+        <img src='data:image/png;base64, {{photos[x][0]}}' />
+      </li>
+        <li>
+          {{likes[x][0][0]}} Likes
+  
+<form method="post" enctype="multipart/form-data" action="/like/<{{photos[x][1]}}>">
+        <input type="submit" value="Like" />
+      </form>
+        </li>
+      <ul>
+        {% if comments %}
+                  {% if comments[x] %}
+                  {% for y in range(comments[x]|length) %}
+                  <li>{{comments[x][y][0]}}: {{comments[x][y][1]}}</li>
+                  {% endfor %}
+                  {% endif %}
+        {% endif %}
+      </ul>
+      <li>
+         <form method="post" enctype="multipart/form-data" action="/comment/<{{photos[x][1]}}>">
+          <label for="comment">Comment:</label>
+                <input type="text" name="comment" required='true' /><br />
+                <input type="submit" value="Comment" />
+         </form>
+      </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+
+
+
+
+

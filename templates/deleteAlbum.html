@@ -1,0 +1,16 @@
+<!doctype html>
+<form method="post" enctype="multipart/form-data" action="/deleteAlbum">
+                <label for="album_name">Enter the Album Name you want to delete:</label>
+                <input type="text" name="album_name" required='true' /><br />
+                <input type="submit" value="Delete" />
+            </form>
+            <h4>List of Your Albums</h4>
+            {% if albums %}
+	    <ul>
+	    {% for album in albums %}
+
+	        <li>{{album[0]}}<br> <!-- view album page, linking album into photos -->
+	<!--         has to check if the user already liked the pohto already, show the number of likes -->
+	      </li>
+    {% endfor %}
+{% endif %}

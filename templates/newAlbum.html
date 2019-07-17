@@ -1,0 +1,16 @@
+<head>
+    <title>Create a New Album!</title>
+</head>
+    <body>
+        {% if message %}
+        <h4>{{message}}</h4>
+        {% endif %}
+        <div class="title">
+            <h1>Create a New Album</h1>
+        </div>
+            <form method="post" enctype="multipart/form-data" action="/newAlbum">
+                <label for="caption">Enter New Album Name:</label>
+                <input type="text" name="album_name" required='true' /><br />
+                <input type="submit" value="Upload" />
+            </form>
+    </body>

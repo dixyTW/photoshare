@@ -1,0 +1,72 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}</h4>
+{% endif %}
+
+{% if pics %}
+  {% for pic in pics %}
+  <img src='data:image/png;base64, {{pic[0]}}' />
+  {% endfor %}
+{% endif %}
+
+{% if bio %}
+  <p>BIO: {{bio[0][0]}}</p>
+{% endif %}
+
+<ul>
+<li><a href='/hello'>Home</a></li>
+<li><a href='/newAlbum'>Create New Album</a></li>
+<li><a href='/profilePic'>Change Profile Picture</a></li>
+<li><a href='/deletePhoto'>Delete Photos</a></li>
+<li><a href='/deleteAlbum'>Delete Album</a></li>
+<li><a href='/changeBio'>Change Bio </a></li>
+</ul>
+
+{% if tags %}
+<p>View Photo By Tag Name</p>
+<h2>Tags Used</h2>
+    <ul>
+    {% for tag in tags %}
+
+        <li><a href='/tag_photo/<{{tag[0]}}>'>{{tag[0]}}</a><br> 
+
+      </li>
+    {% endfor %}
+{% endif %}
+
+{% if friends %}
+<h2>Friends</h2>
+    <ul>
+    {% for friend in friends %}
+
+        <li>{{friend[0]}}<br> 
+      
+      </li>
+    {% endfor %}
+{% endif %}
+
+{% if albums %}
+<h2>Here's your ablums</h2>
+    <ul>
+    {% for album in albums %}
+
+        <li>{{album[0]}}<br> <!-- view album page, linking album into photos -->
+<!--         has to check if the user already liked the pohto already, show the number of likes -->
+      </li>
+    {% endfor %}
+{% endif %}
+{% if photos %}
+<h2>Here's your photos</h2>
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}} <a href='/addTags/<{{photo[1]}}>'>Add</a> or <a href='/removeTags/<{{photo[1]}}>'>Remove</a> Tags<br>
+        <img src='data:image/png;base64, {{photo[0]}}' />
+<!--         has to check if the user already liked the pohto already, show the number of likes -->
+      </li>
+
+    {% endfor %}
+    </ul>
+   
+{% endif %}
+<!-- edit information here (bio, profile picture, hometown etc) -->
