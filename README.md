@@ -6,9 +6,7 @@ MySQL
 ```bash
 export PATH=${PATH}:/usr/local/mysql/bin #path is the path to your local MySQL file, lets cmd able to call mysql by using the command below:
 ```
-```bash
-mysql -u root -h 127.0.0.1 -p
-```
+Open a MySQL window:
 ```bash
 mysql -u root -h 127.0.0.1 -p
 ```
