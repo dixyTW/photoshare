@@ -43,8 +43,8 @@ now = datetime.datetime.now()
 
 #These will need to be changed according to your creditionals
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'fat60221vul3' #CHANGE THIS TO YOUR MYSQL PASSWORD
-app.config['MYSQL_DATABASE_DB'] = 'pa1'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'password' #CHANGE THIS TO YOUR MYSQL PASSWORD
+app.config['MYSQL_DATABASE_DB'] = 'pa1' 
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
