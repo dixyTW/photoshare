@@ -1,9 +1,6 @@
 # PhotoShare
 WebApp that behaves similar to Tumblr
 
-![Home Page](https://github.com/dixyTW/photoshare/blob/master/Screen%20Shot%202019-12-03%20at%2010.58.03%20PM.png)
-![Photos](https://github.com/dixyTW/photoshare/blob/master/Screen%20Shot%202019-12-04%20at%202.01.03%20AM.png)
-
 Guests
 - Browse photos
 
@@ -14,6 +11,11 @@ Users
 - Like/Comment other users photos
 - Add/Remove Friends
 - Look up photos by their hashtags
+
+![Home Page](https://github.com/dixyTW/photoshare/blob/master/Screen%20Shot%202019-12-03%20at%2010.58.03%20PM.png)
+![Photos](https://github.com/dixyTW/photoshare/blob/master/Screen%20Shot%202019-12-04%20at%202.01.03%20AM.png)
+
+
 
 ## Setup
 First download required files with: 
